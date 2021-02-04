@@ -26,11 +26,13 @@
                                 <td><a class="btn btn-primary" href="{{route('products.edit', $product->id)}}">EDIT</a>
 
                                 </td>
-                                <td> <form action="{{route('products.destroy', $product->id)}}" method="post">
+                                <td> 
+                                    <form action="{{route('products.destroy', $product->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger">DELETE</button>
-                                    </form></td>
+                                    </form>
+                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
